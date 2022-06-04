@@ -15,6 +15,8 @@
 <body>
     <div>
         <h1>Ethereum Secret Messenger</h1>
+
+        <button id="metamaskConnect">Connect to Metamask</button>
         <hr>
 
         <label for="message">This site writes a secret message to the Ethereum
@@ -27,6 +29,9 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
 
     <script>
+
+       //this part in javascript
+       $("#metamaskConnect").click(() => { ethereum.request({ method: 'eth_requestAccounts' }); })
 
         // Connect a the web3 provider
         /*if (typeof web3 !== 'undefined') {
